@@ -6,7 +6,7 @@ let weather = require('./utils/weather.js')
 console.log(__dirname)
 
 let app = express()
-
+let port = process.env.PORT || 3000
 //paths
 let publicDirPath = path.join(__dirname, '../public/')
 let viewsPath = path.join(__dirname,'../templates/views')
@@ -112,8 +112,7 @@ app.get('*', (req,res)=>{
     })
 })
 
-console.log('alskdjals')
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('hey')
 })
